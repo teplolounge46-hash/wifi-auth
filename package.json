@@ -1,0 +1,52 @@
+{
+  "name": "wifi-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "routeros-client": "^1.3.2",
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.2.2"
+  }
+}
+```
+
+**Файл 2: `index.js`** (большой файл с кодом бота - дам ниже полностью)
+
+---
+
+### **На GITHUB** (загрузка проекта)
+
+**Шаг 3:** Идём на https://github.com
+- Регистрируемся/входим
+- Нажимаем **зелёную кнопку "New"** (новый репозиторий)
+- Называем: `wifi-auth`
+- Нажимаем **Create repository**
+
+**Шаг 4:** Загружаем файлы в GitHub:
+- На странице репозитория нажмите **"uploading an existing file"**
+- Перетащите 2 файла (`package.json` и `index.js`)
+- Нажмите **"Commit changes"**
+
+✅ **Файлы теперь на GitHub!**
+
+---
+
+### **На RAILWAY** (запуск бота)
+
+**Шаг 5:** Идём на https://railway.app
+- Регистрируемся (лучше через GitHub)
+- Нажимаем **"New Project"**
+- Выбираем **"Deploy from GitHub repo"**
+- Выбираем репозиторий `wifi-auth`
+
+**Шаг 6:** Добавляем настройки (переменные):
+- В Railway открылся ваш проект
+- Нажмите вкладку **"Variables"**
+- Нажмите **"Add Variable"** и добавьте:
+```
+TELEGRAM_BOT_TOKEN = (получите у @BotFather)
+MIKROTIK_HOST = 192.168.1.1 (IP вашего роутера)
+MIKROTIK_USER = api_bot
+MIKROTIK_PASSWORD = ваш_пароль
